@@ -1,12 +1,22 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "outDir": "./dist",
-    "rootDir": "./src",
+    "target": "ESNext", // Ensure you target a modern JavaScript version
+    "module": "ESNext", // Use ES module format
+    "moduleResolution": "node", // Resolve modules like Node.js
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "noEmit": false, // Prevent output to disk
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "rootDir": "./src", // Specify the root directory of your source files
+    "baseUrl": "./src", // Base directory to resolve non-relative module names
+    "outDir": "./dist"
+  },
+  "ts-node": {
+    "experimentalSpecifierResolution": "node",
+    "transpileOnly": true,
+    "esm": true
   }
 }
