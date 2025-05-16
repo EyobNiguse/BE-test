@@ -88,4 +88,5 @@ or inside the Docker container:
 ```bash
 docker exec -it <backend_container_name> npm test
 ```
+https://www.loom.com/share/923142a0206348d9ba21b630b80bc37a
 
