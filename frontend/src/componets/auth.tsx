@@ -41,7 +41,7 @@ const AuthPage = () => {
       setPasswordError("");
       await auth.signup(values);
       message.success("Registration successful!");
-      router.push("/auth"); // Redirect to login page
+      router.push("/"); // Redirect to login page
     } catch (error) {
       message.error(`${error}`);
     } finally {

@@ -10,7 +10,7 @@
     "noEmit": false, // Prevent output to disk
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
-    "rootDir": "./src", // Specify the root directory of your source files
+    "rootDir": "./", // Specify the root directory of your source files
     "baseUrl": "./src", // Base directory to resolve non-relative module names
     "outDir": "./dist"
   },

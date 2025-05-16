@@ -5,8 +5,11 @@
   "main": "server.ts",
   "type": "module",
   "scripts": {
-    "dev": "nodemon ",
-    "test": "jest"
+    "dev": "nodemon",
+    "build":"tsc",
+    "test": "jest",
+    "start": "node --loader  ts-node/esm --experimental-specifier-resolution=node dist/server.js"
+
   },
   "keywords": [],
   "author": "",

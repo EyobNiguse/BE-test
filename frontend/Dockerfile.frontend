@@ -6,5 +6,7 @@ RUN npm install
 
 COPY . .
 
+CMD ["npm", "run", "build"]
+
 # Start frontend in dev/watch mode
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "start"]

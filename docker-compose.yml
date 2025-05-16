@@ -8,7 +8,7 @@ services:
     container_name: backend
     ports:
       - "5000:5000"
-    command: npm run dev
+    command: npm run start
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
       interval: 30s
@@ -23,15 +23,6 @@ services:
         condition: service_started
       redis:
         condition: service_started
-    develop:
-      watch:
-        - action: sync
-          path: ./backend
-          target: /src
-          ignore:
-            - node_modules/
-        - action: rebuild
-          path: package.json
 
   frontend:
     build:
@@ -40,21 +31,12 @@ services:
     container_name: frontend
     ports:
       - "3000:3000"
-    command: npm run dev
+    command: npm run start
     depends_on:
       backend:
         condition: service_healthy
     environment:
       - NODE_ENV=development
-    develop:
-      watch:
-        - action: sync
-          path: ./frontend
-          target: /src
-          ignore:
-            - node_modules/
-        - action: rebuild
-          path: package.json
 
   redis:
     image: redis:7
